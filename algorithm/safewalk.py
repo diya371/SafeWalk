@@ -86,6 +86,9 @@ def load_graph(city="Delhi, India"):
             lighting_score = 0.0
 
         # Final safety weight — lower = safer
+        # Safety weight formula: crime dominates at 0.6 weight (real govt data)
+    # Lighting from OSM tags, crowd from time-of-day, length as tiebreaker
+
         data['safety_weight'] = round(
             (0.6 * crime_score) +
             (0.2 * (1 - lighting_score)) +

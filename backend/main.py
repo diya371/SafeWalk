@@ -33,7 +33,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+# Returns both safest and shortest routes with distance, time and safety scor
 @app.get("/")
 def home():
     return {
